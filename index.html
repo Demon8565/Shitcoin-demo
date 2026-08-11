@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shitcoin ($SHIT) — One Token on Solana</title>
+<meta name="description" content="The Solana Foundation open sourced their canonical asset registry. We forked it, deleted the 300 real assets, and pointed it at one shitcoin.">
+
+<meta property="og:title" content="Shitcoin — One Token on Solana">
+<meta property="og:description" content="Institutional-grade registry infrastructure, forked to track exactly one asset.">
+<meta property="og:image" content="assets/og-image.jpg">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Shitcoin — One Token on Solana">
+<meta name="twitter:description" content="Institutional-grade registry infrastructure, forked to track exactly one asset.">
+<meta name="twitter:image" content="assets/og-image.jpg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <div class="brand"><span class="dot"></span>SHITCOIN</div>
+    <nav class="nav-links">
+      <a href="#filing">The Filing</a>
+      <a href="#buy">How to Buy</a>
+      <a href="https://x.com/shitcoingg" target="_blank" rel="noopener">X / Lore</a>
+      <a class="btn-buy" href="https://jup.ag/swap/SOL-5kr3KPg6Nhx2cBvunCuEgnUnJzRRz7C56aKNaFMmpump" target="_blank" rel="noopener">Buy $SHIT</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="eyebrow"><span class="dot"></span>Filed on Solana — Aug 9, 2026</div>
+    <h1>One token. Institutional-grade infrastructure.</h1>
+    <p class="hero-sub">A serious, open-source asset registry got forked hours after release. Every real asset in it was deleted and replaced with exactly one. This is that token.</p>
+    <div class="hero-actions">
+      <a class="btn-primary" href="https://jup.ag/swap/SOL-5kr3KPg6Nhx2cBvunCuEgnUnJzRRz7C56aKNaFMmpump" target="_blank" rel="noopener">Buy $SHIT on Jupiter →</a>
+      <a class="btn-secondary" href="#filing">Read the Filing</a>
+    </div>
+    <div class="ca-box">
+      <span class="lab">Contract</span>
+      <span id="ca-text">5kr3KPg6Nhx2cBvunCuEgnUnJzRRz7C56aKNaFMmpump</span>
+      <button onclick="copyCA()" id="copy-btn">Copy</button>
+    </div>
+  </div>
+
+  <div class="chart-card">
+    <svg viewBox="0 0 1080 280" preserveAspectRatio="none">
+      <line class="chart-axis" x1="0" y1="170" x2="1080" y2="170"></line>
+      <line class="chart-axis" x1="620" y1="0" x2="620" y2="280"></line>
+      <polyline class="chart-line" points="20,260 45,255 70,262 95,240 120,245 145,220 170,225 195,195 220,205 245,175 270,182 295,150 320,158 345,120 370,128 395,95 420,102 445,80 470,88 495,60 520,75 545,55 570,65 595,45 610,52 620,42"></polyline>
+      <circle class="chart-dot" cx="620" cy="42" r="5"></circle>
+    </svg>
+    <div class="chart-label">Shitcoin</div>
+  </div>
+</section>
+
+<div class="ticker-bar">
+  <div class="wrap ticker-grid">
+    <div class="tick">
+      <div class="tick-label">Price (USD)</div>
+      <div class="tick-value" id="tick-price">—</div>
+    </div>
+    <div class="tick">
+      <div class="tick-label">24h Change</div>
+      <div class="tick-value up" id="tick-change">—</div>
+    </div>
+    <div class="tick">
+      <div class="tick-label">Market Cap</div>
+      <div class="tick-value" id="tick-mcap">—</div>
+    </div>
+    <div class="tick">
+      <div class="tick-label">Liquidity</div>
+      <div class="tick-value" id="tick-liq">—</div>
+    </div>
+  </div>
+</div>
+
+<section class="filing" id="filing">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-num">01 — The Filing</div>
+      <h2>They open-sourced the source of truth. We amended it down to one line.</h2>
+      <p class="section-lede">A large Solana infrastructure org released the public registry behind its canonical assets — Bitcoin, tokenized equities, real-world assets, roughly 300 entries, indexed and verified. Free, serious, and licensed for anyone to fork.</p>
+    </div>
+    <div class="doc">
+      <div class="doc-row">
+        <span class="k">Canonical assets (original)</span>
+        <span class="v strike">300 verified entries</span>
+      </div>
+      <div class="doc-row">
+        <span class="k">Canonical assets (amended)</span>
+        <span class="v new">1 — $SHIT</span>
+      </div>
+      <div class="doc-row">
+        <span class="k">Source</span>
+        <span class="v">Open-source registry, forked hours after release</span>
+      </div>
+      <div class="doc-row">
+        <span class="k">Purpose (original)</span>
+        <span class="v strike">Institutional asset indexing</span>
+      </div>
+      <div class="doc-row">
+        <span class="k">Purpose (amended)</span>
+        <span class="v new">Tracking a shitcoin, on purpose</span>
+      </div>
+      <div class="doc-row">
+        <span class="k">24h Volume</span>
+        <span class="v" id="tick-vol">—</span>
+      </div>
+      <div class="doc-note">
+        <p><strong>Why keep the infrastructure?</strong> Because it's real. The indexing, the verification pipeline, the whole shape of a serious registry — none of it was rebuilt, it was just repointed. Everything underneath $SHIT is the same machinery a billion-dollar org built for real assets. It just happens to track one very stupid one now.</p>
+        <p>No presale. No promises about what any of this becomes. Memes don't have to be complicated to work.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="buy" id="buy">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-num">02 — How to Buy</div>
+      <h2>Three steps. No forms to fill out.</h2>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="step-index">01</div>
+        <h3>Get a Solana wallet</h3>
+        <p>Phantom or Solflare both work. Fund it with SOL from any exchange that supports Solana withdrawals.</p>
+      </div>
+      <div class="step">
+        <div class="step-index">02</div>
+        <h3>Open Jupiter</h3>
+        <p>Use the buy link on this page, or paste the contract address into Jupiter's swap screen yourself. Always verify the CA before you sign.</p>
+      </div>
+      <div class="step">
+        <div class="step-index">03</div>
+        <h3>Swap SOL for $SHIT</h3>
+        <p>Confirm the transaction in your wallet. That's the whole registry entry — you now hold the one canonical asset.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="disclaimer">
+  <div class="wrap">
+    <div class="doc">
+      <p>Notice — $SHIT is a parody project and this page is not financial advice. Memecoins are highly volatile and can go to zero. Always verify the contract address independently before trading, and only risk what you can afford to lose.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap footer-row">
+    <span>&copy; 2026 Shitcoin. Unofficial parody. Not affiliated with the Solana Foundation.</span>
+    <a href="https://x.com/shitcoingg" target="_blank" rel="noopener">@shitcoingg on X</a>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
